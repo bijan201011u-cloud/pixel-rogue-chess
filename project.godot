@@ -1,0 +1,45 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+
+config_version=5
+
+[application]
+
+config/name="Pixel Rogue Chess"
+config/description="A chess + roguelike MVP. Battle through the map, collect upgrades and defeat the Corrupted King."
+config/tags=PackedStringArray("game")
+run/main_scene="res://scenes/main_menu/main_menu.tscn"
+config/features=PackedStringArray("4.3")
+boot_splash/bg_color=Color(0.07, 0.07, 0.1, 1)
+boot_splash/show_image=false
+config/icon="res://icon.png"
+
+[autoload]
+
+SaveManager="*res://scripts/managers/save_manager.gd"
+I18n="*res://scripts/managers/i18n.gd"
+AudioManager="*res://scripts/managers/audio_manager.gd"
+RunManager="*res://scripts/managers/run_manager.gd"
+GameManager="*res://scripts/managers/game_manager.gd"
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=1920
+window/size/window_width_override=486
+window/size/window_height_override=864
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=1
+
+[input_devices]
+
+pointing/emulate_mouse_from_touch=true
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.07, 0.07, 0.1, 1)
+textures/vram_compression/import_etc2_astc=true
+textures/vram_compression/import_s3tc_bptc=true
